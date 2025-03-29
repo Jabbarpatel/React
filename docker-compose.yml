@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build: .
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - .:/usr/frontend/react
+      - /usr/frontend/react/node_modules
+
+    command: npm run dev
